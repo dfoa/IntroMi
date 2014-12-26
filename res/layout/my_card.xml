@@ -1,0 +1,329 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:baselineAligned="false"
+    android:focusableInTouchMode="true"
+    android:measureWithLargestChild="false"
+    android:orientation="vertical"
+    android:scrollbarStyle="outsideOverlay"
+    tools:context="${packageName}.${activityClass}" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top"
+        android:layout_weight="10" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/card_preview"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/imgViewPhoto"
+                    android:layout_width="160dp"
+                    android:layout_height="180dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/photo_profile"
+                    android:maxHeight="150dp"
+                    android:maxWidth="120dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/profile" />
+
+                <ProgressBar
+                    android:id="@+id/pbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/headLinePreview"
+                    android:layout_alignRight="@+id/imgViewPhoto"
+                    android:layout_marginRight="36dp" />
+
+                <EditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/pbar"
+                    android:layout_toRightOf="@+id/imgViewPhoto"
+                    android:ems="10"
+                    android:hint="My name"
+                    android:inputType="textPersonName"
+                    android:maxLines="2"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edHeadLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/nameEditText"
+                    android:layout_centerVertical="true"
+                    android:ems="10"
+                    android:hint="Occupation"
+                    android:inputType="textAutoComplete"
+                    android:maxLines="2"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <ImageView
+                    android:id="@+id/loginWithLinkedin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_below="@id/edHeadLine"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/imgViewPhoto"
+                    android:adjustViewBounds="false"
+                    android:src="@drawable/join_with_linkedin_selector"
+                    android:clickable="true"
+                    android:cropToPadding="false"
+                    android:scaleType="fitCenter" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/seperator1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/seperator_line1"
+                android:scaleType="fitXY"
+                android:src="@drawable/separator" />
+
+            <LinearLayout
+                android:id="@+id/mission"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_blue_back2"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/leftBrackets"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:maxHeight="20dp"
+                    android:maxWidth="20dp"
+                    android:minHeight="15dp"
+                    android:minWidth="15dp"
+                    android:src="@drawable/quotes_white"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/White"
+                    android:textSize="70sp" />
+
+                <EditText
+                    android:id="@+id/etMission"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@string/app_name"
+                    android:hint="Share here what you are looking for"
+                    android:maxLines="3"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/White"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/rightBrackets"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:maxHeight="20dp"
+                    android:maxWidth="20dp"
+                    android:minHeight="15dp"
+                    android:minWidth="15dp"
+                    android:src="@drawable/quotes_white"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/White"
+                    android:textSize="70sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/seperator2"
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:baselineAlignBottom="false"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:src="@drawable/separator" />
+
+            <LinearLayout
+                android:id="@+id/mail_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageEmail"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/email_button_selector"
+                    android:clickable="true"
+                    android:maxHeight="60dp"
+                    android:maxWidth="60dp"
+                    android:scaleType="fitCenter" />
+
+                <EditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="My email address"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/emailImage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/card_blue_back" />
+
+            <LinearLayout
+                android:id="@+id/phone_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imagePhone"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/phone_button_selector"
+                    android:clickable="true"
+                    android:maxHeight="60dp"
+                    android:maxWidth="60dp"
+                    android:scaleType="fitCenter" />
+
+                <EditText
+                    android:id="@+id/phoneEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:contentDescription="Professional Headline"
+                    android:ems="10"
+                    android:hint="+1(212)-1234567"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ImageView02"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/card_blue_back" />
+
+            <LinearLayout
+                android:id="@+id/phone_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageSite"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/link_button_selector"
+                    android:clickable="true"
+                    android:maxHeight="60dp"
+                    android:maxWidth="60dp"
+                    android:scaleType="fitCenter" />
+
+                <EditText
+                    android:id="@+id/siteEditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:contentDescription="Professional Headline"
+                    android:hint="A link to your website or linkedin"   
+                    android:inputType="text|textWebEditText" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ImageView02"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/card_blue_back" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/ImageView08"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="false"
+        android:cropToPadding="false"
+        android:paddingBottom="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/separator" />
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:baselineAligned="false"
+        android:clickable="true"
+        android:fitsSystemWindows="false"
+        android:gravity="center|bottom"
+        android:measureWithLargestChild="true"
+        android:orientation="horizontal"
+        android:scrollbarAlwaysDrawVerticalTrack="false" >
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.51"
+            android:text="Save" />
+
+    </LinearLayout>
+
+</LinearLayout>

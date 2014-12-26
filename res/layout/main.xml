@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ListLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/White"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/separator" />
+
+ 
+    <ProgressBar
+    
+        android:id="@+id/progressBarScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          style="?android:attr/progressBarStyleSmall"
+
+         />
+
+    
+   
+       <Button
+           android:id="@+id/scan"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@android:drawable/btn_default"
+           android:clickable="true"
+           android:fadingEdge="horizontal"
+           android:fitsSystemWindows="false"
+           android:focusable="false"
+           android:text="Look for people nearby" />
+  <!-- 
+    <ImageView
+        android:id="@+id/seperator"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/separator" />
+        
+
+   
+    <EditText
+        android:id="@+id/autoCompleteTextViewSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+         android:imeOptions="actionSearch"
+         android:singleLine="true"
+        android:hint="Search a card" />
+-->
+
+
+
+    <ListView
+        android:id="@+id/listV_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/White" 
+         
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true"/>
+       
+        
+
+</LinearLayout>
+
+  
