@@ -26,7 +26,7 @@
 
          />
 
-    
+   <!--    
    
        <Button
            android:id="@+id/scan"
@@ -38,7 +38,7 @@
            android:fitsSystemWindows="false"
            android:focusable="false"
            android:text="Look for people nearby" />
-  <!-- 
+  
     <ImageView
         android:id="@+id/seperator"
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:src="@drawable/separator" />
-        
+      -->
 
    
     <EditText
@@ -69,6 +69,8 @@
          
         android:footerDividersEnabled="true"
         android:headerDividersEnabled="true"/>
+       
+      
        
         
 

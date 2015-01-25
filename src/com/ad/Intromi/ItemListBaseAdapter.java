@@ -51,20 +51,28 @@ private Typeface tf1;
 	}
 
 	public int getCount() {
+		
+		System.out.println("Holder, size  " + itemDetailsrrayList.size());
 		return itemDetailsrrayList.size();
+		
 	}
 
 	public Object getItem(int position) {
+		System.out.println("Hodler, position " +  itemDetailsrrayList.get(position));
 		return itemDetailsrrayList.get(position);
 	}
 
 	public long getItemId(int position) {
+		
+		System.out.println("Hodler, ItemID " + position);
 		return position;
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
 	
+		System.out.println("Holder,Position " + position);
+		
 		if (convertView == null) {
 //			System.out.println("this is the position " +position);
 //		if (position % 2 ==1)
@@ -89,6 +97,7 @@ private Typeface tf1;
 //			holder.ch_check = (CheckBox) convertView.findViewById(R.id.star);
 			holder.txt_rssi = (TextView) convertView.findViewById(R.id.rssi);
          	holder.bar = (ImageView) convertView.findViewById(R.id.imageViewBlackBar);
+         	
          	
          	
 			  // add listener for email 
@@ -123,10 +132,19 @@ private Typeface tf1;
         holder.txt_rssi.setText(itemDetailsrrayList.get(position).getmRssi());
  //       Drawable t = c.getResources().getDrawable(R.id.imageViewBlackBar);
 //        holder.bar.setImageResource(R.id.imageViewBlackBar);
-        int i = holder.bar.getHeight();
-        System.out.println("The heightis " + i);
-        holder.bar.getLayoutParams().height=300;
+        int i = Integer.parseInt(itemDetailsrrayList.get(position).getmRssi())*(-1);
+//        int s = holder.bar.getHeight();
+        if (i!=0){
+            System.out.println("Height is RSSI " + i);
+ //           System.out.println("GetHe is RSSI " + s);
+        i =  (600*(0+i))/(0+100);
+   
         
+        System.out.println("The heightis " + i);
+        holder.bar.getLayoutParams().height=i;
+  
+
+        }
      //   holder.bar.setBackground(t);
      
       
@@ -155,6 +173,15 @@ private Typeface tf1;
 		CheckBox ch_check;
 		TextView  txt_rssi;
 		 
+		
+	}
+
+	public void updateData(int pos) {
+		
+		
+		
+		// TODO Auto-generated method stub
+		
 		
 	}
 	
