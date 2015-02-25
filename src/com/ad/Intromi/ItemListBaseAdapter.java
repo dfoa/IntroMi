@@ -137,7 +137,7 @@ private Typeface tf1;
         if (i!=0){
             System.out.println("Height is RSSI " + i);
  //           System.out.println("GetHe is RSSI " + s);
-        i =  (600*(0+i))/(0+100);
+        i =  (300*(0+i))/(0+100);
    
         
         System.out.println("The heightis " + i);

@@ -101,7 +101,7 @@ public class DeviceListActivity extends Activity implements SwipeRefreshLayout.O
 	private ImageView  seperatorPB;
 	private  static boolean isBTRunning;
 	//private static int DELAYBT = 300000;
-	private static int DELAYBT = 3000;
+	private static int DELAYBT = 60000;
 	//for demo
 
 	// Debugging/BLE
@@ -1071,14 +1071,16 @@ public class DeviceListActivity extends Activity implements SwipeRefreshLayout.O
 		if(lv1.getAdapter()==null)
 			   lv1.setAdapter(lAdapter);
 			else{
-			
+
+				
+				
 			   lAdapter.updateData(pos); //update your adapter's data
 		   lAdapter.notifyDataSetChanged();
 			  
 			}
 //		lAdapter.
 //		lv1.setAdapter(lAdapter);
-		lAdapter.notifyDataSetChanged();
+//		lAdapter.notifyDataSetChanged();
 
 	}   
 

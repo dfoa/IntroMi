@@ -56,7 +56,7 @@
                     android:layout_alignBottom="@+id/pbar"
                     android:layout_toRightOf="@+id/imgViewPhoto"
                     android:ems="10"
-                    android:hint="My name"
+                    android:hint="My full name"
                     android:inputType="textPersonName"
                     android:maxLines="2"
                     android:textAppearance="?android:attr/textAppearanceLarge"
@@ -69,7 +69,7 @@
                     android:layout_alignLeft="@+id/nameEditText"
                     android:layout_centerVertical="true"
                     android:ems="10"
-                    android:hint="Occupation"
+                    android:hint="Faculty"
                     android:inputType="textAutoComplete"
                     android:maxLines="2"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -136,11 +136,11 @@
                     android:layout_marginTop="30dp"
                     android:layout_weight="1"
                     android:fontFamily="@string/app_name"
-                    android:hint="Share here what you are looking for"
+                    android:hint="ID Number"
                     android:maxLines="3"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="@color/White"
-                    android:textSize="20sp"
+                    android:textSize="40sp"
                     android:textStyle="bold" />
 
                 <ImageView
