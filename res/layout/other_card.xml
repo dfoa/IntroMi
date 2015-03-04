@@ -82,7 +82,7 @@
     <LinearLayout
         android:id="@+id/mission"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="1dp"
         android:layout_gravity="top"
         android:layout_weight="1"
         android:background="@drawable/card_blue_back2"
@@ -105,8 +105,8 @@
 
         <TextView
             android:id="@+id/tvMission"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"

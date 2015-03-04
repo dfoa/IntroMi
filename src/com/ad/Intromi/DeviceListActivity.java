@@ -43,6 +43,7 @@ import com.google.code.linkedinapi.schema.Position;
 
 import android.app.ActionBar;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothClass.Device;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.le.BluetoothLeAdvertiser;
 import android.content.BroadcastReceiver;
@@ -534,6 +535,7 @@ public class DeviceListActivity extends Activity implements SwipeRefreshLayout.O
 				//IntroMi
 
 				device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+				System.out.println("The name of the device" + device.getName() +" and mac is " + device.getAddress());
 				System.out.println("This is theMacc and RSSI  of the device "+ device.getAddress() +" " + mRssi);
 				// if (device.getName().equalsIgnoreCase("IntroMi")) {
 				mRssi = intent.getShortExtra(BluetoothDevice.EXTRA_RSSI,Short.MIN_VALUE);
@@ -553,7 +555,10 @@ public class DeviceListActivity extends Activity implements SwipeRefreshLayout.O
 						System.out.println("update device  " + device.getAddress() +" with RSSI: "+mRssi );
 
 						found = true;
-						updateRssi(mRssi,device.getAddress());      
+						updateRssi(mRssi,device.getAddress());  
+						System.out.println("This is the information i have about this  device" + device.describeContents() + " "+ device.getAddress() 
+						+ "" +device.fetchUuidsWithSdp() + " "+ device.getName()+ " " +device.getType());
+
 					}
 
 
