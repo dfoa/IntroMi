@@ -584,6 +584,11 @@ public class DeviceListActivity extends Activity implements SwipeRefreshLayout.O
 
 
 						new MyAsyncTask().execute(device.getAddress());
+
+						
+						//for  load test/////
+						////////////////////
+						/*
 						
             		new Thread(new Runnable() { 
             	         public void run(){
@@ -627,7 +632,7 @@ public class DeviceListActivity extends Activity implements SwipeRefreshLayout.O
             	 }).start();	
 
 						 
-
+*/
 
 
 

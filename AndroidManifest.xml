@@ -33,6 +33,9 @@
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
  
+    
+    
+    
 
     <uses-sdk
         android:maxSdkVersion="21"
